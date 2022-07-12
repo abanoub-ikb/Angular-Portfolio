@@ -1,0 +1,35 @@
+<section class="portfolio py-5">
+    <div  class="container py-5">
+        <h2 class="heading">portfolio</h2>
+        <div class="star">
+            <i class="fa-solid fa-star fa-xl"></i>
+        </div>
+        <!-- portfolio cards -->
+        <div (click)="showLayer($event)"  class="row g-3">
+            <div *ngFor="let project of projects" class="col-lg-4 col-md-6 portfolio-box">
+                <div class="item">
+                    <img class="w-100" src={{project.img}} alt="">
+                    <div class="overlay">
+                        <i class="fa-solid fa-plus fa-7x"></i>
+                    </div>
+                </div>
+            </div>
+        <!-- end of card -->
+        </div>
+    </div>
+    <!-- project layer -->
+    <div (click)="close($event)" class="layer d-none justify-content-center align-items-center text-center">
+        <div class="layer-insider col-md-7 col-11  ">
+            <h2 class="heading">{{name}}</h2>
+            <div class="star">
+                <i class="fa-solid fa-star fa-xl"></i>
+            </div>
+            <div class="">
+                <img class="w-75 " [src]="img" alt="">
+            </div>
+            <p class="mt-2 project-text">{{desc}}</p>
+            <i (click)="hide()" class="fa-solid fa-rectangle-xmark fa-3x close"></i>
+        </div>
+    </div>
+
+</section>

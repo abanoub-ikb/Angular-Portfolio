@@ -1,0 +1,31 @@
+footer{
+    background-color: #2c3e50;
+    min-width: 100vw;
+    color: white;
+}
+footer h3{
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+footer i{
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+footer i:hover{
+    background-color: white;
+    color: black;
+}
+footer p{
+    font-size: 1.2rem;
+}

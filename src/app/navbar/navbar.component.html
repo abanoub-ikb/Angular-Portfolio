@@ -1,0 +1,18 @@
+<nav>
+    <div class="navbar">
+        <div class="nav-logo ">
+            <h2><a (click)="show()" routerLink="home">aikb</a></h2>
+        </div>
+        <div (click)="show()" class="nav-menu-icon">
+            <span class="me-1">menu</span>
+            <i class="fa-solid fa-bars "></i>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li ><a (click)="show()" routerLink="portfolio" routerLinkActive="nav-active">portfolio</a></li>
+                <li><a (click)="show()" routerLink="about" routerLinkActive="nav-active">about</a></li>
+                <li><a (click)="show()" routerLink="contact" routerLinkActive="nav-active">contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

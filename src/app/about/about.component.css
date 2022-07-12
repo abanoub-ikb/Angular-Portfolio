@@ -1,0 +1,19 @@
+.about{
+    background-color: #1abc9c;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about h2{
+    color: white;
+}
+.about .star{
+    color: white;
+}
+.about .star::before{
+    background-color: white;
+}
+.about .star::after{
+    background-color: white;
+}

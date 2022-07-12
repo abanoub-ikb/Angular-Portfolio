@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+.heading{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+.heading +.star{
+    color: #2c3e50;
+    text-align: center;
+    position: relative;
+    width: 20rem;
+    margin: auto;
+    margin-bottom: 2.5rem;
+}
+.heading +.star::before{
+    position: absolute;
+    content: '';
+    background-color: #2c3e50;
+    height: 4px;
+    width: 40%;
+    top: 50%;
+    right: 0;
+}
+.heading +.star::after{
+    position: absolute;
+    content: '';
+    background-color: #2c3e50;
+    height: 4px;
+    width: 40%;
+    top: 50%;
+    left: 0;
+}
