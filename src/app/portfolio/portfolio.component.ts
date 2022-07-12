@@ -16,7 +16,7 @@ export class PortfolioComponent implements OnInit {
     {name:'SUBMARINE',img:'../../assets/images/submarine.png',desc:'submarine is a project for Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderi'},
   ];
   
-  hide(){
+  hide(){   
    let layer:any=document.querySelector('.layer');
     layer.classList.replace('d-flex','d-none')
   };
@@ -28,11 +28,24 @@ export class PortfolioComponent implements OnInit {
   name:string='';
   img:string='';
   desc:string='';
+
   showLayer(e:any){
-    const imgSrc = e.target.previousElementSibling.getAttribute('src');
-    
+    let overLay = Array.from(document.querySelectorAll('.overlay')) ;
+    let overlayIcon = Array.from(document.querySelectorAll('.overlay i'));
+    let imgSrc=''
+    overLay.map((ele)=>{
+      if(e.target==ele){
+        imgSrc= e.target.previousElementSibling.getAttribute('src');
+      }
+    });
+    overlayIcon.map((ele=>{
+     if( e.target==ele){
+      imgSrc=e.target.parentElement.previousElementSibling.getAttribute('src')
+     }
+    }))
+   
     this.projects.map((ele)=>{
-      if(imgSrc==ele.img){
+      if(imgSrc==ele.img  ){
         this.name=ele.name;
         this.img=ele.img;
         this.desc=ele.desc;

@@ -5,9 +5,9 @@
             <i class="fa-solid fa-star fa-xl"></i>
         </div>
         <!-- portfolio cards -->
-        <div (click)="showLayer($event)"  class="row g-3">
+        <div   class="row g-3">
             <div *ngFor="let project of projects" class="col-lg-4 col-md-6 portfolio-box">
-                <div class="item">
+                <div (click)="showLayer($event)" class="item">
                     <img class="w-100" src={{project.img}} alt="">
                     <div class="overlay">
                         <i class="fa-solid fa-plus fa-7x"></i>
